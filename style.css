@@ -1,0 +1,77 @@
+@font-face {
+    font-family: nanoom;
+    src: url(font/나눔손글씨\ 금은보화.ttf);
+}
+
+* {
+    font-family: nanoom;
+}
+
+body {
+    background-image: url(https://t1.daumcdn.net/cfile/blog/99AC38385D082BFD2C?original);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border: 10px solid gray;
+    border-radius: 20px;
+    background-color: rgba(247, 243, 242, 0.7);
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+}
+
+.main-img {
+    width: 15vw;
+    height: 20vh;
+}
+
+.answer-area {
+    margin-bottom: 21.440px;
+}
+
+#user-input {
+    height: 80px;
+    max-width: 400px;
+    width: 100%;
+    font-size: 3vw;
+    text-align: center;
+}
+
+.button-style {
+    height: 80px;
+    width: 100px;
+    border-radius: 50px;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+#play-button {
+    border: 1px solid green;
+    background-color: green;
+    color: white;
+}
+
+#reset-button{
+    border: 1px solid orange;
+    background-color: orange;
+    color: white;
+}
+
+.red-text {
+    color: red;
+}
+
+.blue-text {
+    color: blue;
+}
+
+.mg {
+    margin-left: 3px;
+    margin-right: 3px;
+}

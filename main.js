@@ -1,7 +1,7 @@
 let computerNum = 0;
 let playButton = document.getElementById("play-button");
 let userInput = document.getElementById("user-input");
-let resultArea = document.getElementById("result-area");
+let resultText = document.getElementById("result-text");
 let resetButton = document.getElementById("reset-button");
 let chances = 10;
 let chanceArea = document.getElementById("chance-area");
@@ -30,12 +30,12 @@ function play() {
 
     // 8. 1~100 범위 밖 숫자 입력시 알람. 기회 깍지 않음
     if (userValue < 1 || userValue > 100) {
-        resultArea.textContent = "1과 100사이의 숫자를 입력해 주세요"
+        resultText.textContent = "1과 100사이의 숫자를 입력해 주세요"
         return;
     }
     // 9. 이미 입력한 숫자 입력시 알람. 기회 깍지 않음
     if (history.includes(userValue)) {
-        resultArea.textContent = "이미 입력한 숫자입니다 다른 숫자를 입력해 주세요"
+        resultText.textContent = "이미 입력한 숫자입니다 다른 숫자를 입력해 주세요"
         return;
     }
 
@@ -45,13 +45,13 @@ function play() {
 
     if (userValue < computerNum) {
         // console.log("Up!!!")
-        resultArea.textContent = "Up!!!"
+        resultText.textContent = "Up!!!"
     } else if (userValue > computerNum) {
         // console.log("Down!!!")
-        resultArea.textContent = "Down!!!"
+        resultText.textContent = "Down!!!"
     } else {
         // console.log("맞췄습니다!!!")
-        resultArea.textContent = "맞췄습니다!!!"
+        resultText.textContent = "맞췄습니다!!!"
         gameOver = true;
     }
 
