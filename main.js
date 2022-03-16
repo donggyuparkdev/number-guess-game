@@ -1,9 +1,10 @@
 let computerNum = 0;
 let playButton = document.getElementById("play-button");
 let userInput = document.getElementById("user-input");
+let resultImg = document.getElementById("main-img")
 let resultText = document.getElementById("result-text");
 let resetButton = document.getElementById("reset-button");
-let chances = 10;
+let chances = 5;
 let chanceArea = document.getElementById("chance-area");
 let gameOver = false;
 let history = []
@@ -45,24 +46,29 @@ function play() {
 
     if (userValue < computerNum) {
         // console.log("Up!!!")
-        resultText.textContent = "Up!!!"
+        resultImg.src = "https://c.tenor.com/klU6hKPTGN8AAAAM/kstr-kochstrasse.gif";
+        resultText.textContent = "Up!!!";
     } else if (userValue > computerNum) {
         // console.log("Down!!!")
-        resultText.textContent = "Down!!!"
+        resultImg.src = "https://media3.giphy.com/media/LkuPxRS0F6gmc/200w.gif?cid=82a1493b538m2r7445vozthexammf1e4huat47crjs8g50cj&rid=200w.gif&ct=g";
+        resultText.textContent = "Down!!!";
     } else {
         // console.log("맞췄습니다!!!")
-        resultText.textContent = "맞췄습니다!!!"
+        resultImg.src = "https://media2.giphy.com/media/111ebonMs90YLu/200.gif";
+        resultText.textContent = "맞췄습니다!!!";
         gameOver = true;
     }
 
     history.push(userValue);
     console.log(history);
 
+    // 7. 기회 다쓰면 게임 끝 (버튼, disable)
     if (chances < 1) {
+        resultImg.src = "https://i.kym-cdn.com/photos/images/newsfeed/001/623/800/b3b.gif";
+        resultText.textContent = "리셋을 눌러 다시 시작하세요!!!";
         gameOver = true;
     }
 
-    // 7. 5번 기회 다쓰면 게임 끝 (버튼, disable)
     if (gameOver == true) {
         playButton.disabled = true;
     }
@@ -75,10 +81,11 @@ function reset() {
     // 새로운 번호가 생성되고
     pickRandomNum();
 
-    resultArea.textContent = "결과값이 여기 나옵니다."
+    resultText.textContent = "정답이 뭘까요?"
     gameOver = false;
     playButton.disabled = false;
-    chances = 10;
+    resultImg.src = "https://t1.daumcdn.net/cfile/tistory/9982E7475DF3782716";
+    chances = 5;
     chanceArea.textContent = `남은기회:${chances}번`;
     history = [];
 }

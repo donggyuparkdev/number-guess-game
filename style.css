@@ -7,6 +7,14 @@
     font-family: nanoom;
 }
 
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
 body {
     background-image: url(https://t1.daumcdn.net/cfile/blog/99AC38385D082BFD2C?original);
     background-size: cover;
@@ -20,15 +28,15 @@ body {
 .container {
     border: 10px solid gray;
     border-radius: 20px;
-    background-color: rgba(247, 243, 242, 0.7);
+    background-color: rgba(247, 243, 242, 0.8);
     text-align: center;
     max-width: 700px;
     width: 100%;
 }
 
-.main-img {
+#main-img {
     width: 15vw;
-    height: 20vh;
+    /* height: 20vh; */
 }
 
 .answer-area {
@@ -39,8 +47,12 @@ body {
     height: 80px;
     max-width: 400px;
     width: 100%;
-    font-size: 3vw;
+    font-size: 30pt;
     text-align: center;
+}
+
+.btn:disabled {
+    opacity: 0.5;
 }
 
 .button-style {
@@ -57,7 +69,7 @@ body {
     color: white;
 }
 
-#reset-button{
+#reset-button {
     border: 1px solid orange;
     background-color: orange;
     color: white;
@@ -74,4 +86,17 @@ body {
 .mg {
     margin-left: 3px;
     margin-right: 3px;
+}
+
+@media screen and (max-width: 500px) {
+    #main-img {
+        width: 50vw;
+    }
+
+    #user-input {
+        height: 80px;
+        max-width: 300px;
+        width: 100%;
+        margin-bottom: 21.44px;
+    }
 }
